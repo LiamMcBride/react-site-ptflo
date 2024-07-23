@@ -1,0 +1,18 @@
+.projects-page {
+    background-color: #464646;
+    min-height: calc(100vh - 192px);
+    text-align: left;
+    padding: 96px 10%;
+}
+
+.project-grid {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.projects-page .custom-h2 {
+    margin-bottom: 28px;
+}
