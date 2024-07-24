@@ -16,13 +16,14 @@
     font-family: "Ubuntu Mono", monospace;
     font-weight: 700;
     color: #F3FEF7;
+    /* font-size: clamp(var(--min), var(--val) var(--max)) */
     /* text-align: left; */
 }
 
 html {font-size: 100%;} /* 16px */
 
 .custom-h1 {
-    font-size: 4.210rem; /* 67.36px */
+    font-size: calc(2rem + 2.65vw); /* 67.36px */
     font-family: 'Ubuntu Mono';
     font-weight: 700;
     margin: 0;
