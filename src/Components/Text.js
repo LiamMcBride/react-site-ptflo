@@ -39,6 +39,12 @@ export function Header5({children}) {
   );
 }
 
+export function CustomMedium({children}) {
+  return (
+    <p className="custom-medium">{children}</p>
+  );
+}
+
 export function LargeSubtext({children}) {
   return (
     <p className="large-subtext">{children}</p>

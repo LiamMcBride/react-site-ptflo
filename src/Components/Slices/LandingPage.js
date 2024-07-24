@@ -7,6 +7,9 @@ function LandingPage({children}) {
         <div className="intro-segment">
             <Header2>Hey, I'm</Header2>
             <NameHeader>Liam McBride</NameHeader>
+            <br></br>
+            <br></br>
+            <br></br>
             <LargeSubtext>I am a full stack developer who specializes in React applications.<br></br><br></br>I value creative development and would love to apply it by creating user experiences that stand out and leave an impression.</LargeSubtext>
         </div>
         <div className="call-segment">

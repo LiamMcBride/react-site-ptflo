@@ -10,4 +10,16 @@
     border: #2F2F2F 2px solid;
     border-radius: 4px;
     box-shadow: 4px 4px 2px black;
+
+    animation: growTag .35s;
 }
+
+@keyframes growTag {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+

@@ -54,6 +54,16 @@ html {font-size: 100%;} /* 16px */
     font-weight: 400;
 }
 
+.custom-medium {
+    font-size: 1rem;
+    font-family: 'Ubuntu Mono';
+    font-weight: 400;
+    margin: 4px;
+    color: #F3FEF7;
+
+    /* padding: 0; */
+}
+
 h2 {font-size: 3.158rem; /* 50.56px */}
 
 h3 {font-size: 2.369rem; /* 37.92px */}

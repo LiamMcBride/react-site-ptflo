@@ -38,6 +38,7 @@
 }
 
 .hover-screen {
+    box-sizing:border-box;
     position: absolute;
     z-index: 2;
     width: 308px;
@@ -50,6 +51,7 @@
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 0.375rem;
+    padding: 16px;
 }
 
 .project-full-background {
@@ -77,8 +79,55 @@
     border-radius: 0.375rem;
     border: #2F2F2F 2px solid;
     box-shadow: 4px 4px 2px black;
+    animation: growPage .35s;
+}
+
+@keyframes growPage {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 .project-full .custom-h2 {
     /* margin: 16px; */
+}
+
+.projects-button-grid {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-button-grid button {
+    border: none;
+    border: 1px rgba(0,0,0,.30) solid;
+    font-size: 1rem;
+    padding: 6px 12px;
+    background-color: #464646;
+}
+
+.projects-button-grid .current-projects-page {
+    background-color: #55ff8e3c;
+}
+
+.projects-button-grid button:hover {
+    cursor: pointer;
+}
+
+.projects-button-grid .current-projects-page:hover {
+    cursor:default;
+}
+
+.projects-button-grid button:hover > .custom-medium {
+    color:#55ff8e;
+    cursor: pointer;
+}
+
+.projects-button-grid .current-projects-page:hover > .custom-medium {
+    color: #F3FEF7;
+    cursor:default;
 }
