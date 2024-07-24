@@ -13,8 +13,20 @@ function ProjectsPage({children}) {
     const [currentProject, setCurrentProject] = useState(null)
     const [currentProjectPage, setCurrentProjectPage] = useState(1)
 
-    const projectsPerPage = 6;
-    const maxPages = Math.floor(projects_data.length / projectsPerPage);
+    const projectsPerPage = () => {
+      if(window.innerWidth <= 784){
+        return 2;
+      }
+      if(window.innerWidth <= 1584){
+        return 6;
+      }
+      if(window.innerWidth <= 1984){
+        return 8;
+      }
+      return 16;
+    };
+
+    const maxPages = Math.ceil(projects_data.length / projectsPerPage());
 
     function handlePageChange(chg) {
       if(chg === 'prev'){
@@ -33,7 +45,7 @@ function ProjectsPage({children}) {
         <Header2>Projects</Header2>
         {currentProject != null ? <ProjectFull onClose={() => setCurrentProject(null)} pj={currentProject}/> : null}
         <div className="project-grid">
-            {projects_data.slice(projectsPerPage * (currentProjectPage - 1),projectsPerPage * (currentProjectPage - 1) + 6).map((pj, i) => <Project onProjectClick={() => setCurrentProject(pj)} key={i} pj={pj}/>)}
+            {projects_data.slice(projectsPerPage() * (currentProjectPage - 1),projectsPerPage() * (currentProjectPage - 1) + projectsPerPage()).map((pj, i) => <Project onProjectClick={() => setCurrentProject(pj)} key={i} pj={pj}/>)}
         </div>
         <div className="projects-button-grid">
           <button disabled={currentProjectPage === 1} onClick={() => handlePageChange('prev')}><CustomMedium>Previous</CustomMedium></button>
