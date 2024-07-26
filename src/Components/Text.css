@@ -23,7 +23,7 @@
 html {font-size: 100%;} /* 16px */
 
 .custom-h1 {
-    font-size: calc(2rem + 2.65vw); /* 67.36px */
+    font-size: min(calc(2rem + 2.65vw), 4.210rem); /* 67.36px */
     font-family: 'Ubuntu Mono';
     font-weight: 700;
     margin: 0;
@@ -34,13 +34,15 @@ html {font-size: 100%;} /* 16px */
     
 }
 .custom-h2 {
+    font-size: min(calc(0.76rem + 2.65vw), 3.158rem);
     margin: 0;
-    font-size: 3.158rem;
     font-family: 'Ubuntu Mono';
     font-weight: 400;
 }
+/* TODO If you use a h3 use this for sizing */
 .custom-h3 {
-    font-size: 2.369rem;
+    /* font-size: 2.369rem; */
+    font-size: min(calc(0.76rem + 2.65vw), 2.369rem);
     font-family: 'Ubuntu Mono';
     font-weight: 400;
 }
@@ -50,13 +52,15 @@ html {font-size: 100%;} /* 16px */
     font-weight: 400;
 }
 .custom-h5, .large-subtext {
-    font-size: 1.333rem;
+    font-size: min(calc(1rem + 0.37vw), 1.333rem);
+    /* font-size: 1.333rem; */
     font-family: 'Ubuntu Mono';
     font-weight: 400;
 }
 
 .custom-medium {
     font-size: 1rem;
+    /* font-size: calc(0.1rem + 1vw); */
     font-family: 'Ubuntu Mono';
     font-weight: 400;
     margin: 4px;
@@ -65,15 +69,7 @@ html {font-size: 100%;} /* 16px */
     /* padding: 0; */
 }
 
-h2 {font-size: 3.158rem; /* 50.56px */}
 
-h3 {font-size: 2.369rem; /* 37.92px */}
-
-h4 {font-size: 1.777rem; /* 28.48px */}
-
-h5 {font-size: 1.333rem; /* 21.28px */}
-
-small {font-size: 0.750rem; /* 12px */}
 
 .name-header {
     position: relative;
